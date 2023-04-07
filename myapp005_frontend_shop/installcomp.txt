@@ -1,0 +1,6 @@
+npx create-react-app myapp005_frontend_shop
+cd
+npm install axios react-router-dom
+npm install @reduxjs/toolkit react-redux
+npm install redux-devtools-extension
+npm install bootstrap

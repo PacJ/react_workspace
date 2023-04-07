@@ -11,12 +11,29 @@ const EditInfo = () => {
     memberPass: '',
     memberPhone: '',
   });
-  //   const { memberName, memberPass, memberPhone } = inputs;
+  const { memberName, memberPass, memberPhone } = inputs;
 
   useEffect(() => {
-    setInputs();
+    setInputs({
+      memberName: '',
+      memberPass: '',
+      memberPhone: '',
+    });
   }, []);
 
+  const handleReset = (e) => {
+    e.preventDefault();
+    setInputs({
+      memberName: '',
+      memberPass: '',
+      memberPhone: '',
+    });
+  };
+
+  const handleBack = (e) => {
+    e.preventDefault();
+    navigator(-1);
+  };
   const handleValueChange = (e) => {
     e.preventDefault();
     let nextState = {};
@@ -75,6 +92,15 @@ const EditInfo = () => {
             onChange={handleValueChange}
           ></input>
         </li>
+        <button className='btn btn-primary' onClick={handleUpdate}>
+          수정
+        </button>
+        <button className='btn btn-primary' onClick={handleReset}>
+          취소
+        </button>
+        <button className='btn btn-primary' onClick={handleBack}>
+          뒤로
+        </button>
       </form>
     </div>
   );

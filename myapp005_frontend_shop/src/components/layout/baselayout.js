@@ -28,17 +28,17 @@ function BaseLayout() {
                     {localStorage.getItem('memberName') + ' LOGOUT'}
                   </NavLink>
                 </li>
-                <li className='nav-item'>
+                {/* <li className='nav-item'>
                   <NavLink style={activeStyle} className='nav-link' to='/login'>
                     LOGIN
                   </NavLink>
-                </li>
+                </li> */}
               </>
             ) : (
               <>
                 <li className='nav-item'>
                   <NavLink style={activeStyle} className='nav-link' to='/login'>
-                    LOGOUT
+                    LOGIN
                   </NavLink>
                 </li>
               </>
